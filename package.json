@@ -1,5 +1,5 @@
 {
-  "name": "kasa-ui",
+  "name": "@kasa-ui/core",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
