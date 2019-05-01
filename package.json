@@ -1,6 +1,6 @@
 {
   "name": "@kasa-ui/core",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,17 +8,21 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hanyoupcho/kasa-ui.git"
   },
-  "keywords": ["UI", "React", "Component"],
+  "keywords": [
+    "UI",
+    "React",
+    "Component"
+  ],
   "author": "Hanyoup Cho",
   "license": "ISC",
   "bugs": {
@@ -34,7 +38,6 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.4.5"
   },
-
   "files": [
     "lib/**/*"
   ]
