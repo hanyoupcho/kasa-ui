@@ -2,8 +2,9 @@
   "name": "@kasa-ui/core",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
+    "dev": "nodemon --exec tsc",
     "test": "jest --config jestconfig.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
@@ -24,13 +25,17 @@
     "Component"
   ],
   "author": "Hanyoup Cho",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/hanyoupcho/kasa-ui/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "homepage": "https://github.com/hanyoupcho/kasa-ui#readme",
   "devDependencies": {
     "@types/jest": "^24.0.12",
+    "@types/react": "^16.8.15",
     "jest": "^24.7.1",
     "prettier": "^1.17.0",
     "ts-jest": "^24.0.2",
@@ -40,5 +45,8 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "dependencies": {
+    "react": "^16.8.6"
+  }
 }

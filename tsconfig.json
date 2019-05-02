@@ -3,9 +3,11 @@
     "target": "es5",
     "module": "commonjs",
     "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
     "outDir": "./lib",
     "strict": true,
-    "lib": ["es2016"],
+    "lib": ["es5", "es6", "es7", "es2017", "dom"]
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]
