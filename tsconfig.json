@@ -1,14 +1,42 @@
+// {
+//   "compilerOptions": {
+//     // Target
+// 		"target": "es5",
+// 		// Search under node_modules for non-relative imports.
+// 		// "moduleResolution": "node",
+// 		// Process & infer types from .js files.
+// 		// "allowJs": true,
+// 		// Don't emit; allow Babel to transform files.
+// 		// "noEmit": true,
+// 		// Enable strictest settings like strictNullChecks & noImplicitAny.
+// 		"strict": true,
+// 		// Disallow features that require cross-file information for emit.
+// 		// "isolatedModules": true,
+// 		// Import non-ES modules as default imports.
+//     "esModuleInterop": true,
+//     "removeComments": true,
+//     "module": "commonjs",
+//     "declaration": true,
+//     "sourceMap": true,
+//     "jsx": "react",
+//     "outDir": "./lib",
+//     "lib": ["es5", "es6", "es7", "es2017"]
+//   },
+//   "include": ["src"],
+//   "exclude": ["node_modules", "**/__tests__/*"]
+// }
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
     "declaration": true,
-    "allowSyntheticDefaultImports": true,
-    "jsx": "react",
+    "declarationDir": "./lib",
+    "module": "es2015",
+    // "noImplicitAny": true,
     "outDir": "./lib",
-    "strict": true,
-    "lib": ["es5", "es6", "es7", "es2017", "dom"]
+    "jsx": "react",
+    "target": "es5"
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": ["node_modules"]
 }

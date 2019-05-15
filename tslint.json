@@ -2,6 +2,9 @@
   "extends": ["tslint:recommended", "tslint-config-prettier"],
   "rules": {
     "no-angle-bracket-type-assertion": false,
-    "array-type": false
+    "array-type": false,
+    "semicolon": false,
+    "member-access": false,
+    "member-ordering": false
   }
 }

@@ -1,39 +1,35 @@
 import * as React from 'react';
+import styled from 'styled-components';
+import { ILabelProps, ISharedFormProps } from '../Shared/index'
 
-export interface ILabelProps {
-  label?: string;
-  labelWidth?: 'xs' | 's' | 'm' | 'l' | 'xl' | 'fill' | number;
-}
-
-export interface ISharedFormProps {
-  height?: 'xs' | 's' | 'm' | 'l' | 'xl' | number;
-  disabled?: boolean;
-}
+type InputType = 'text' | 'password' | 'email' | 'number'
 
 export interface ITextFieldProps extends ILabelProps, ISharedFormProps {
   id?: string;
-  type?: 'text' | 'password' | 'email' | 'number';
-  name?: string;
   multiline?: boolean;
-  defaultValue?: string;
-  placeholder?: string;
-  required?: boolean;
   rows?: string | number;
   rowsMax?: string | number;
-  value?: string;
-  autoFocuse?: boolean;
-  onChange?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>;
+  type?: InputType;
+  onChange(event: React.ChangeEvent<HTMLInputElement>): void;
 }
 
-export class TextField extends React.Component<ITextFieldProps> {
-  public render() {
-    const props = {
-      ...this.props,
-      type: this.props.type || 'text',
-      value: this.props.value || '',
-    }
-    return (
-      <input {...props}/>
-    )
+const Input = styled.input`
+  /* font-size: 1.5em; */
+`;
+
+export const TextField = (props: ITextFieldProps) => {
+  const inputProps = {
+    // ...props,
+    // height: props.height || 'm',
+    // labelWidth: props.labelWidth || 'm',
+    // type: props.type || 'text',
+    value: props.value || '',
+    // width: props.width || 'm',
+    onChange: props.onChange,
   }
+
+  return (
+    <input {...inputProps} />
+  )
 }
+
